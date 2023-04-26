@@ -1,3 +1,4 @@
+// Kuklin Pavel, group B22-DSAI-04, p.kuklin@innopolis.university
 #include <iostream>
 #include <fstream> // std::ifstream
 #include <cstdio>
@@ -459,7 +460,7 @@ int main()
     fprintf(gnuPipe, "unset autoscale\n");
     fprintf(gnuPipe, "set xrange [%f:%f]\n", xi, xm);
     fprintf(gnuPipe, "set yrange [%f:%f]\n", yi, ym);
-    
+
     fprintf(gnuPipe, "plot '-' title 'initial data' with circles, %f", res(0));
     for(int r = 1; r < res.getHeight(); ++r)
         fprintf(gnuPipe, "+(%f)*(x**%d)", res(r), r);
